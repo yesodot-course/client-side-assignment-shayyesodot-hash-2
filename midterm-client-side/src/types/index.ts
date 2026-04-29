@@ -1,48 +1,15 @@
-export interface Item {
-  id: string;
-  name: string;
-  price: number;
-  stock: number;
-  category: string;
-  supplier: string; // Supplier name or ID
-  image: string;
-  description: string;
-}
-
-export interface SupplierItem {
-  name: string;
-  price: number;
-}
-
-export interface Supplier {
-  id: string;
-  name: string;
-  items: SupplierItem[];
-}
-
-export interface OrderItem {
-  productId: string;
-  name: string;
-  quantity: number;
-  price: number;
-}
-
-export interface Order {
-  id: string;
-  items: OrderItem[];
-  address: string;
-  orderDate: string;
-  shopProfit: number;
-}
+export * from './Item';
+export * from './Order';
+export * from './Supplier';
 
 export interface Analytics {
   totalProducts: number;
-  lowStockItems: Item[];
+  lowStockItems: import('./Item').Item[];
   monthlyRevenue: number;
   weeklyProfitableCategory: string;
-  dailyProfitableItem: Item;
-  highestProfitMarginItem: Item;
-  lowestProfitMarginItem: Item;
-  mostProfitableSupplier: Supplier;
+  dailyProfitableItem: import('./Item').Item;
+  highestProfitMarginItem: import('./Item').Item;
+  lowestProfitMarginItem: import('./Item').Item;
+  mostProfitableSupplier: import('./Supplier').Supplier;
   supplierSpending: { supplierName: string; amount: number }[];
 }
