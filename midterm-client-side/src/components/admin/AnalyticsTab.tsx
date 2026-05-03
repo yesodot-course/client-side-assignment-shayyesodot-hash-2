@@ -21,7 +21,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
         <Grid container spacing={3}>
             {/* Summary Cards */}
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent>
                         <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
                             <Inventory color="primary" />
@@ -37,7 +44,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
             </Grid>
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent>
                         <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
                             <AttachMoney color="success" />
@@ -53,7 +67,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
             </Grid>
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent>
                         <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
                             <TrendingUp color="warning" />
@@ -69,7 +90,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
             </Grid>
 
             <Grid size={{ xs: 12, sm: 6, md: 3 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent>
                         <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
                             <Group color="info" />
@@ -86,7 +114,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
 
             {/* Detail Cards */}
             <Grid size={{ xs: 12, md: 4 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent sx={{ textAlign: "right" }}>
                         <Typography variant="h6" sx={{ mb: 2 }}>
                             מוצר הכי רווחי (24 שעות)
@@ -104,7 +139,14 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
-                <Card sx={{ background: "#ffffff", height: "100%", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                <Card
+                    sx={{
+                        background: "#ffffff",
+                        height: "100%",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                        border: "1px solid #e0e0e0",
+                    }}
+                >
                     <CardContent sx={{ textAlign: "right" }}>
                         <Typography variant="h6" sx={{ mb: 2 }}>
                             שולי רווח (כל הזמן)
@@ -155,7 +197,7 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
                         background: "#ffffff",
                         height: "100%",
                         border: lowStockItems.length > 0 ? "1px solid rgba(255,152,0,0.8)" : "1px solid #e0e0e0",
-                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)"
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                     }}
                 >
                     <CardContent sx={{ textAlign: "right" }}>
@@ -219,7 +261,13 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
             {/* Supplier Spending */}
             {analytics.supplierSpending && (
                 <Grid size={{ xs: 12 }}>
-                    <Card sx={{ background: "#ffffff", boxShadow: "0 2px 8px rgba(0,0,0,0.08)", border: "1px solid #e0e0e0" }}>
+                    <Card
+                        sx={{
+                            background: "#ffffff",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                            border: "1px solid #e0e0e0",
+                        }}
+                    >
                         <CardContent sx={{ textAlign: "right" }}>
                             <Typography variant="h6" sx={{ mb: 2 }}>
                                 פירוט הוצאות לפי ספק
@@ -231,39 +279,43 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
                                         <Box
                                             key={i}
                                             sx={{
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            p: 1.5,
-                                            borderRadius: 2,
-                                            background: "#f9f9f9",
-                                            flexDirection: "row-reverse",
-                                        }}
-                                    >
-                                        <Box
-                                            sx={{
                                                 display: "flex",
+                                                justifyContent: "space-between",
                                                 alignItems: "center",
-                                                gap: 1,
+                                                p: 1.5,
+                                                borderRadius: 2,
+                                                background: "#f9f9f9",
                                                 flexDirection: "row-reverse",
                                             }}
                                         >
-                                            <Typography
-                                                variant="body2"
-                                                color="text.secondary"
-                                                sx={{ width: 24, textAlign: "center" }}
+                                            <Box
+                                                sx={{
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    gap: 1,
+                                                    flexDirection: "row-reverse",
+                                                }}
                                             >
-                                                {i + 1}.
-                                            </Typography>
-                                            <Typography variant="body1" sx={{ fontWeight: 600 }}>
-                                                {s.supplierName}
+                                                <Typography
+                                                    variant="body2"
+                                                    color="text.secondary"
+                                                    sx={{ width: 24, textAlign: "center" }}
+                                                >
+                                                    {i + 1}.
+                                                </Typography>
+                                                <Typography variant="body1" sx={{ fontWeight: 600 }}>
+                                                    {s.supplierName}
+                                                </Typography>
+                                            </Box>
+                                            <Typography
+                                                variant="body1"
+                                                color="primary.light"
+                                                sx={{ fontWeight: "bold" }}
+                                            >
+                                                ₪{s.amount.toFixed(2)}
                                             </Typography>
                                         </Box>
-                                        <Typography variant="body1" color="primary.light" sx={{ fontWeight: "bold" }}>
-                                            ₪{s.amount.toFixed(2)}
-                                        </Typography>
-                                    </Box>
-                                ))}
+                                    ))}
                             </Box>
                         </CardContent>
                     </Card>

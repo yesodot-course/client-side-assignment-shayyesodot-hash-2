@@ -69,7 +69,15 @@ const DetailsPage = () => {
                 חזרה למוצרים
             </Button>
 
-            <Card sx={{ borderRadius: 4, background: "#ffffff", overflow: "hidden", border: "1px solid #e0e0e0", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
+            <Card
+                sx={{
+                    borderRadius: 4,
+                    background: "#ffffff",
+                    overflow: "hidden",
+                    border: "1px solid #e0e0e0",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                }}
+            >
                 <Grid container sx={{ flexDirection: "row-reverse" }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Box

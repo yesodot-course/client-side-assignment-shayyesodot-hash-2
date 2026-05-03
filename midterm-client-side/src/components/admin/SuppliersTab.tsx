@@ -33,7 +33,12 @@ export const SuppliersTab = ({ suppliers, onAddSupplier, onEditSupplier, onDelet
         </Box>
         <TableContainer
             component={Paper}
-            sx={{ borderRadius: 3, background: "#ffffff", border: "1px solid #e0e0e0", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
+            sx={{
+                borderRadius: 3,
+                background: "#ffffff",
+                border: "1px solid #e0e0e0",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            }}
         >
             <Table>
                 <TableHead>

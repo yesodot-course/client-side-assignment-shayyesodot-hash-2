@@ -1,7 +1,7 @@
 import { Group, Inventory, TrendingUp } from "@mui/icons-material";
 import { Box, Container, Tab, Tabs, Typography } from "@mui/material";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import axios, { AxiosError } from "axios";
+import axios from "axios";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { itemsApi } from "../api/itemsApi";
@@ -117,7 +117,7 @@ const AdminPage = () => {
     const newItemInputRef = useRef<HTMLInputElement | null>(null);
 
     // ── Derived values ──
-    const lowStockItems = useMemo(() => items.filter((item) => item.stock > 0 && item.stock < 5), [items]);
+    const lowStockItems = useMemo(() => items.filter((item) => item.stock < 5), [items]);
 
     // Focus new item input when dialog opens in focusOnAdd mode
     useEffect(() => {

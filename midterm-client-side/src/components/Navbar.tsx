@@ -58,7 +58,10 @@ const Navbar = () => {
                                 color: location.pathname === "/admin" ? "primary.main" : "white",
                                 backgroundColor: location.pathname === "/admin" ? "#ffffff" : "transparent",
                                 "& .MuiButton-startIcon": { ml: 1, mr: 0 },
-                                "&:hover": { backgroundColor: location.pathname === "/admin" ? "#ffffff" : "rgba(255,255,255,0.2)" }
+                                "&:hover": {
+                                    backgroundColor:
+                                        location.pathname === "/admin" ? "#ffffff" : "rgba(255,255,255,0.2)",
+                                },
                             }}
                         >
                             ניהול
@@ -81,7 +84,10 @@ const Navbar = () => {
                                 backgroundColor: location.pathname === "/cart" ? "#ffffff" : "transparent",
                                 "& .MuiButton-startIcon": { ml: 1, mr: 0 },
                                 boxShadow: "none",
-                                "&:hover": { backgroundColor: location.pathname === "/cart" ? "#ffffff" : "rgba(255,255,255,0.2)" }
+                                "&:hover": {
+                                    backgroundColor:
+                                        location.pathname === "/cart" ? "#ffffff" : "rgba(255,255,255,0.2)",
+                                },
                             }}
                         >
                             סל קניות
