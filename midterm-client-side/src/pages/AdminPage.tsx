@@ -335,7 +335,7 @@ const AdminPage = () => {
                     variant="h3"
                     sx={{
                         fontWeight: 800,
-                        background: "linear-gradient(45deg, #8b5cf6 30%, #ec4899 90%)",
+                        background: "linear-gradient(45deg, #46bbcaff 30%, #e93c07ff 90%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                     }}

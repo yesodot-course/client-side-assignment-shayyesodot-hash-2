@@ -38,7 +38,7 @@ const Navbar = () => {
                                 fontWeight: 900,
                                 letterSpacing: ".05rem",
                                 color: "inherit",
-                                background: "linear-gradient(45deg, #8b5cf6 30%, #ec4899 90%)",
+                                background: "linear-gradient(45deg, #b6d11dff 30%, #3ddd0c71 90%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 display: { xs: "none", sm: "block" },

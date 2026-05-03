@@ -83,7 +83,7 @@ const HomePage = () => {
                     sx={{
                         fontWeight: 900,
                         fontSize: { xs: "3rem", md: "5rem" },
-                        background: "linear-gradient(45deg, #8b5cf6 30%, #ec4899 90%)",
+                        background: "linear-gradient(45deg, #e4d72cff 30%, #e64545ff 90%)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                         mb: 2,
