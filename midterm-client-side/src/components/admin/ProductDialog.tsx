@@ -178,9 +178,7 @@ export const ProductDialog = ({
                                 p: 3,
                                 textAlign: "center",
                                 cursor: isUploading ? "not-allowed" : "pointer",
-                                "&:hover": !isUploading
-                                    ? { borderColor: "primary.main", background: "#f5f5f5" }
-                                    : {},
+                                "&:hover": !isUploading ? { borderColor: "primary.main", background: "#f5f5f5" } : {},
                                 transition: "all 0.2s",
                                 opacity: isUploading ? 0.7 : 1,
                             }}

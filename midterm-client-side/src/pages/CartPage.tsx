@@ -73,7 +73,7 @@ const CartPage = () => {
             return;
         }
         if (totalQuantity > 50) {
-            toast.error("הזמנה לא יכולה להכיל יותר מ-50 פריטים סה\"כ");
+            toast.error('הזמנה לא יכולה להכיל יותר מ-50 פריטים סה"כ');
             return;
         }
 
@@ -142,7 +142,15 @@ const CartPage = () => {
                 {/* Cart Items */}
                 <Grid size={{ xs: 12, md: 8 }}>
                     {cartItems.length === 0 ? (
-                        <Paper sx={{ p: 6, textAlign: "center", background: "#f5f5f5", borderRadius: 4, border: "1px solid #e0e0e0" }}>
+                        <Paper
+                            sx={{
+                                p: 6,
+                                textAlign: "center",
+                                background: "#f5f5f5",
+                                borderRadius: 4,
+                                border: "1px solid #e0e0e0",
+                            }}
+                        >
                             <ShoppingCartCheckout sx={{ fontSize: 80, color: "text.secondary", mb: 2, opacity: 0.5 }} />
                             <Typography variant="h5" color="text.secondary">
                                 הסל שלך ריק לחלוטין.
@@ -182,18 +190,18 @@ const CartPage = () => {
                     <Grid container spacing={3} sx={{ flexDirection: "row-reverse" }}>
                         {recommendations.map((item) => (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-                                    <Card
-                                        sx={{
-                                            background: "#ffffff",
-                                            borderRadius: 2,
-                                            border: "1px solid #e0e0e0",
-                                            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-                                            height: "100%",
-                                            display: "flex",
-                                            flexDirection: "column",
-                                            textAlign: "right",
-                                        }}
-                                    >
+                                <Card
+                                    sx={{
+                                        background: "#ffffff",
+                                        borderRadius: 2,
+                                        border: "1px solid #e0e0e0",
+                                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                                        height: "100%",
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        textAlign: "right",
+                                    }}
+                                >
                                     <CardMedia
                                         component="img"
                                         height="180"
