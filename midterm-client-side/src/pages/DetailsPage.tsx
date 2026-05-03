@@ -69,7 +69,7 @@ const DetailsPage = () => {
                 חזרה למוצרים
             </Button>
 
-            <Card sx={{ borderRadius: 4, background: "linear-gradient(145deg, #1e2130, #262a3d)", overflow: "hidden" }}>
+            <Card sx={{ borderRadius: 4, background: "#ffffff", overflow: "hidden", border: "1px solid #e0e0e0", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}>
                 <Grid container sx={{ flexDirection: "row-reverse" }}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <Box
@@ -109,11 +109,11 @@ const DetailsPage = () => {
                                 </Typography>
                             </Box>
 
-                            <Typography variant="h3" color="primary.light" sx={{ fontWeight: 900, mb: 3 }}>
+                            <Typography variant="h3" color="primary.main" sx={{ fontWeight: 900, mb: 3 }}>
                                 ₪{item.price.toFixed(2)}
                             </Typography>
 
-                            <Divider sx={{ my: 2, borderColor: "rgba(255,255,255,0.1)" }} />
+                            <Divider sx={{ my: 2, borderColor: "#e0e0e0" }} />
 
                             <Typography variant="body1" sx={{ color: "text.secondary", lineHeight: 1.8, mb: 4 }}>
                                 {item.description}

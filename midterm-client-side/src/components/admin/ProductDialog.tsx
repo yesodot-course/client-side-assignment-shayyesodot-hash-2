@@ -60,8 +60,7 @@ export const ProductDialog = ({
             onClose={onClose}
             maxWidth="sm"
             fullWidth
-            dir="rtl"
-            sx={{ "& .MuiDialog-paper": { borderRadius: 3, background: "#1e2130" } }}
+            sx={{ "& .MuiDialog-paper": { borderRadius: 3, background: "#ffffff" } }}
         >
             <DialogTitle sx={{ fontWeight: "bold", textAlign: "right" }}>
                 {isEditing ? "עריכת מוצר" : "הוספת מוצר חדש לחנות"}
@@ -174,13 +173,13 @@ export const ProductDialog = ({
                             component="label"
                             sx={{
                                 display: "block",
-                                border: "2px dashed rgba(139,92,246,0.4)",
+                                border: "2px dashed #cccccc",
                                 borderRadius: 2,
                                 p: 3,
                                 textAlign: "center",
                                 cursor: isUploading ? "not-allowed" : "pointer",
                                 "&:hover": !isUploading
-                                    ? { borderColor: "primary.main", background: "rgba(139,92,246,0.05)" }
+                                    ? { borderColor: "primary.main", background: "#f5f5f5" }
                                     : {},
                                 transition: "all 0.2s",
                                 opacity: isUploading ? 0.7 : 1,

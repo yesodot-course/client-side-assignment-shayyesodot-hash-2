@@ -131,9 +131,7 @@ const CartPage = () => {
                 sx={{
                     fontWeight: 800,
                     mb: 4,
-                    background: "linear-gradient(45deg, #8b5cf6 30%, #ec4899 90%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    color: "primary.main",
                     display: "inline-block",
                 }}
             >
@@ -144,7 +142,7 @@ const CartPage = () => {
                 {/* Cart Items */}
                 <Grid size={{ xs: 12, md: 8 }}>
                     {cartItems.length === 0 ? (
-                        <Paper sx={{ p: 6, textAlign: "center", background: "rgba(30, 33, 48, 0.5)", borderRadius: 4 }}>
+                        <Paper sx={{ p: 6, textAlign: "center", background: "#f5f5f5", borderRadius: 4, border: "1px solid #e0e0e0" }}>
                             <ShoppingCartCheckout sx={{ fontSize: 80, color: "text.secondary", mb: 2, opacity: 0.5 }} />
                             <Typography variant="h5" color="text.secondary">
                                 הסל שלך ריק לחלוטין.
@@ -184,16 +182,18 @@ const CartPage = () => {
                     <Grid container spacing={3} sx={{ flexDirection: "row-reverse" }}>
                         {recommendations.map((item) => (
                             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
-                                <Card
-                                    sx={{
-                                        background: "linear-gradient(145deg, #1e2130, #262a3d)",
-                                        borderRadius: 3,
-                                        height: "100%",
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        textAlign: "right",
-                                    }}
-                                >
+                                    <Card
+                                        sx={{
+                                            background: "#ffffff",
+                                            borderRadius: 2,
+                                            border: "1px solid #e0e0e0",
+                                            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+                                            height: "100%",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            textAlign: "right",
+                                        }}
+                                    >
                                     <CardMedia
                                         component="img"
                                         height="180"
@@ -208,7 +208,7 @@ const CartPage = () => {
                                         <Typography variant="body2" color="text.secondary">
                                             {item.category}
                                         </Typography>
-                                        <Typography variant="h6" color="primary.light">
+                                        <Typography variant="h6" color="primary.main">
                                             ₪{item.price.toFixed(2)}
                                         </Typography>
                                         <Box sx={{ flexGrow: 1 }} />

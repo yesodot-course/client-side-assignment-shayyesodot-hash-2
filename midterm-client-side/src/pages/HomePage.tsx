@@ -83,11 +83,8 @@ const HomePage = () => {
                     sx={{
                         fontWeight: 900,
                         fontSize: { xs: "3rem", md: "5rem" },
-                        background: "linear-gradient(45deg, #e4d72cff 30%, #e64545ff 90%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
+                        color: "primary.main",
                         mb: 2,
-                        textShadow: "0 0 40px rgba(139, 92, 246, 0.3)",
                     }}
                 >
                     שי שיווק השקמה
@@ -105,9 +102,9 @@ const HomePage = () => {
                         sx={{
                             p: 3,
                             borderRadius: 4,
-                            background: "rgba(30, 33, 48, 0.5)",
-                            backdropFilter: "blur(10px)",
-                            border: "1px solid rgba(255, 255, 255, 0.05)",
+                            background: "#ffffff",
+                            border: "1px solid #e0e0e0",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
                             position: "sticky",
                             top: 100,
                             textAlign: "right",

@@ -18,14 +18,15 @@ export const SearchBar = ({ value, onChange }: SearchBarProps) => (
             input: {
                 startAdornment: (
                     <InputAdornment position="start">
-                        <SearchIcon color="action" />
+                        <SearchIcon color="primary" />
                     </InputAdornment>
                 ),
                 sx: {
-                    borderRadius: 3,
-                    backgroundColor: "rgba(30, 33, 48, 0.5)",
-                    "&:hover": { backgroundColor: "rgba(30, 33, 48, 0.8)" },
+                    borderRadius: 30,
+                    backgroundColor: "#ffffff",
+                    "&:hover": { backgroundColor: "#f9f9f9" },
                     textAlign: "right",
+                    boxShadow: "0 2px 5px rgba(0,0,0,0.05)",
                 },
             },
         }}

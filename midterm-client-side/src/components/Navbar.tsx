@@ -30,17 +30,14 @@ const Navbar = () => {
                         component={Link}
                         to="/"
                     >
-                        <StorefrontIcon sx={{ ml: 1, color: "primary.main", fontSize: 32 }} />
+                        <StorefrontIcon sx={{ ml: 1, color: "secondary.main", fontSize: 32 }} />
                         <Typography
                             variant="h5"
                             noWrap
                             sx={{
                                 fontWeight: 900,
                                 letterSpacing: ".05rem",
-                                color: "inherit",
-                                background: "linear-gradient(45deg, #b6d11dff 30%, #3ddd0c71 90%)",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
+                                color: "#ffffff",
                                 display: { xs: "none", sm: "block" },
                             }}
                         >
@@ -55,11 +52,13 @@ const Navbar = () => {
                             variant={location.pathname === "/admin" ? "contained" : "text"}
                             startIcon={<AdminPanelSettingsIcon />}
                             sx={{
-                                borderRadius: "12px",
+                                borderRadius: "20px",
                                 px: 2,
                                 fontWeight: 700,
-                                color: location.pathname === "/admin" ? "white" : "text.primary",
+                                color: location.pathname === "/admin" ? "primary.main" : "white",
+                                backgroundColor: location.pathname === "/admin" ? "#ffffff" : "transparent",
                                 "& .MuiButton-startIcon": { ml: 1, mr: 0 },
+                                "&:hover": { backgroundColor: location.pathname === "/admin" ? "#ffffff" : "rgba(255,255,255,0.2)" }
                             }}
                         >
                             ניהול
@@ -67,18 +66,22 @@ const Navbar = () => {
                         <Button
                             component={Link}
                             to="/cart"
-                            variant={location.pathname === "/cart" ? "contained" : "outlined"}
-                            color="primary"
+                            variant={location.pathname === "/cart" ? "contained" : "text"}
                             startIcon={
-                                <Badge badgeContent={totalCartItems} color="secondary">
+                                <Badge badgeContent={totalCartItems} color="error">
                                     <ShoppingCartIcon />
                                 </Badge>
                             }
                             sx={{
-                                borderRadius: "12px",
-                                px: 2,
+                                borderRadius: "20px",
+                                px: 3,
+                                py: 1,
                                 fontWeight: 700,
+                                color: location.pathname === "/cart" ? "primary.main" : "white",
+                                backgroundColor: location.pathname === "/cart" ? "#ffffff" : "transparent",
                                 "& .MuiButton-startIcon": { ml: 1, mr: 0 },
+                                boxShadow: "none",
+                                "&:hover": { backgroundColor: location.pathname === "/cart" ? "#ffffff" : "rgba(255,255,255,0.2)" }
                             }}
                         >
                             סל קניות

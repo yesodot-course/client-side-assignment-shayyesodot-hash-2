@@ -22,8 +22,9 @@ export const CartSummary = ({
             sx={{
                 p: 4,
                 borderRadius: 4,
-                background: "rgba(30, 33, 48, 0.8)",
-                backdropFilter: "blur(10px)",
+                background: "#ffffff",
+                border: "1px solid #e0e0e0",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                 position: "sticky",
                 top: 100,
                 textAlign: "right",
@@ -32,7 +33,7 @@ export const CartSummary = ({
             <Typography variant="h5" sx={{ fontWeight: 700, mb: 3 }}>
                 סיכום הזמנה
             </Typography>
-            <Divider sx={{ mb: 3, borderColor: "rgba(255,255,255,0.1)" }} />
+            <Divider sx={{ mb: 3, borderColor: "#e0e0e0" }} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between", mb: 1.5, flexDirection: "row-reverse" }}>
                 <Typography color="text.secondary">פריטים שונים</Typography>
@@ -49,7 +50,7 @@ export const CartSummary = ({
                 </Typography>
             </Box>
 
-            <Divider sx={{ mb: 3, borderColor: "rgba(255,255,255,0.1)" }} />
+            <Divider sx={{ mb: 3, borderColor: "#e0e0e0" }} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4, flexDirection: "row-reverse" }}>
                 <Typography variant="h6" sx={{ fontWeight: "bold" }}>

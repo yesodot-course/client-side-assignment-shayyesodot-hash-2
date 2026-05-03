@@ -66,8 +66,7 @@ export const SupplierDialog = ({
             onClose={onClose}
             maxWidth="md"
             fullWidth
-            dir="rtl"
-            sx={{ "& .MuiDialog-paper": { borderRadius: 3, background: "#1e2130" } }}
+            sx={{ "& .MuiDialog-paper": { borderRadius: 3, background: "#ffffff" } }}
         >
             <DialogTitle sx={{ fontWeight: "bold", textAlign: "right" }}>{dialogTitle}</DialogTitle>
 
@@ -111,8 +110,7 @@ export const SupplierDialog = ({
                     </Button>
                 </Box>
 
-                {/* Catalog list */}
-                <Paper variant="outlined" sx={{ background: "rgba(0,0,0,0.1)", borderRadius: 2 }}>
+                <Paper variant="outlined" sx={{ background: "#f9f9f9", borderRadius: 2 }}>
                     <List>
                         {catalogItems.length === 0 ? (
                             <Typography variant="body2" sx={{ p: 3, textAlign: "center", color: "text.secondary" }}>

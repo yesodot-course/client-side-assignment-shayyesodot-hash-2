@@ -20,10 +20,8 @@ export const ProductCard = ({ item, onAddToCart }: ProductCardProps) => {
                 width: 320,
                 display: "flex",
                 flexDirection: "column",
-                borderRadius: 3,
+                borderRadius: 2,
                 overflow: "hidden",
-                background: "linear-gradient(145deg, #1e2130, #262a3d)",
-                border: "1px solid rgba(255, 255, 255, 0.05)",
                 position: "relative",
                 textAlign: "right",
             }}
@@ -43,11 +41,11 @@ export const ProductCard = ({ item, onAddToCart }: ProductCardProps) => {
                         position: "absolute",
                         top: 16,
                         left: 16,
-                        backgroundColor: "rgba(30, 33, 48, 0.8)",
+                        backgroundColor: "rgba(255, 255, 255, 0.9)",
                         backdropFilter: "blur(4px)",
-                        color: "white",
+                        color: "primary.main",
                         fontWeight: "bold",
-                        border: "1px solid rgba(255,255,255,0.1)",
+                        border: "1px solid rgba(0,0,0,0.1)",
                     }}
                 />
             </Box>
@@ -77,7 +75,7 @@ export const ProductCard = ({ item, onAddToCart }: ProductCardProps) => {
                         flexDirection: "row-reverse",
                     }}
                 >
-                    <Typography variant="h5" sx={{ fontWeight: 800, color: "primary.light" }}>
+                    <Typography variant="h5" sx={{ fontWeight: 800, color: "primary.main" }}>
                         ₪{item.price.toFixed(2)}
                     </Typography>
                     <Typography
@@ -107,7 +105,7 @@ export const ProductCard = ({ item, onAddToCart }: ProductCardProps) => {
                         to={`/product/${item.id}`}
                         fullWidth
                         startIcon={<VisibilityIcon sx={{ ml: 1, mr: 0 }} />}
-                        sx={{ borderRadius: 2 }}
+                        sx={{ borderRadius: 5 }}
                     >
                         פרטים
                     </Button>
@@ -119,7 +117,7 @@ export const ProductCard = ({ item, onAddToCart }: ProductCardProps) => {
                     disabled={item.stock === 0}
                     onClick={() => onAddToCart(item, quantity)}
                     startIcon={<ShoppingCartIcon sx={{ ml: 1, mr: 0 }} />}
-                    sx={{ mt: 1, py: 1.2, borderRadius: 2, fontWeight: "bold" }}
+                    sx={{ mt: 1, py: 1.2, borderRadius: 5, fontWeight: "bold" }}
                 >
                     {item.stock > 0 ? "הוסף לסל" : "אזל מהמלאי"}
                 </Button>

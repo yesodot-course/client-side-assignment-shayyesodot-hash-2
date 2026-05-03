@@ -33,11 +33,11 @@ export const SuppliersTab = ({ suppliers, onAddSupplier, onEditSupplier, onDelet
         </Box>
         <TableContainer
             component={Paper}
-            sx={{ borderRadius: 3, background: "rgba(30, 33, 48, 0.5)", backdropFilter: "blur(10px)" }}
+            sx={{ borderRadius: 3, background: "#ffffff", border: "1px solid #e0e0e0", boxShadow: "0 2px 8px rgba(0,0,0,0.08)" }}
         >
             <Table>
                 <TableHead>
-                    <TableRow sx={{ background: "rgba(0,0,0,0.2)" }}>
+                    <TableRow sx={{ background: "#f5f5f5" }}>
                         <TableCell align="right" sx={{ fontWeight: "bold" }}>
                             שם ספק
                         </TableCell>
@@ -68,13 +68,6 @@ export const SuppliersTab = ({ suppliers, onAddSupplier, onEditSupplier, onDelet
                                         title="ערוך ספק וקטלוג"
                                     >
                                         <Edit />
-                                    </IconButton>
-                                    <IconButton
-                                        color="success"
-                                        onClick={() => onEditSupplier(supplier, true)}
-                                        title="הוסף מוצר לקטלוג"
-                                    >
-                                        <Add />
                                     </IconButton>
                                     <IconButton
                                         color="error"

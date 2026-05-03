@@ -335,9 +335,8 @@ const AdminPage = () => {
                     variant="h3"
                     sx={{
                         fontWeight: 800,
-                        background: "linear-gradient(45deg, #46bbcaff 30%, #e93c07ff 90%)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
+                        color: "primary.main",
+                        mb: 1,
                     }}
                 >
                     לוח בקרה ניהולי

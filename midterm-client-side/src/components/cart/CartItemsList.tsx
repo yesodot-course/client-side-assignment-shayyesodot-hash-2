@@ -17,7 +17,9 @@ export const CartItemsList = ({ items, onRemove, onUpdateQuantity }: CartItemsLi
                     sx={{
                         display: "flex",
                         borderRadius: 4,
-                        background: "linear-gradient(145deg, #1e2130, #262a3d)",
+                        background: "#ffffff",
+                        border: "1px solid #e0e0e0",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                         overflow: "hidden",
                         flexDirection: "row-reverse",
                     }}
@@ -57,7 +59,7 @@ export const CartItemsList = ({ items, onRemove, onUpdateQuantity }: CartItemsLi
                         </Box>
 
                         {/* Price */}
-                        <Typography variant="h6" color="primary.light" sx={{ fontWeight: 800, mt: 1 }}>
+                        <Typography variant="h6" color="primary.main" sx={{ fontWeight: 800, mt: 1 }}>
                             ₪{item.price.toFixed(2)}
                         </Typography>
 
@@ -75,7 +77,8 @@ export const CartItemsList = ({ items, onRemove, onUpdateQuantity }: CartItemsLi
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
-                                    background: "rgba(0,0,0,0.2)",
+                                    background: "#f9f9f9",
+                                    border: "1px solid #e0e0e0",
                                     borderRadius: 8,
                                     p: 0.5,
                                 }}
