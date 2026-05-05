@@ -6,9 +6,10 @@ interface AnalyticsTabProps {
     analytics?: Analytics;
     totalProductsCount: number;
     lowStockItems: Item[];
+    allItems?: Item[];
 }
 
-export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: AnalyticsTabProps) => {
+export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems, allItems = [] }: AnalyticsTabProps) => {
     if (!analytics) {
         return (
             <Box sx={{ display: "flex", justifyContent: "center", py: 10 }}>
@@ -196,62 +197,76 @@ export const AnalyticsTab = ({ analytics, totalProductsCount, lowStockItems }: A
                     sx={{
                         background: "#ffffff",
                         height: "100%",
-                        border: lowStockItems.length > 0 ? "1px solid rgba(255,152,0,0.8)" : "1px solid #e0e0e0",
+                        border: "1px solid #e0e0e0",
                         boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
                     }}
                 >
-                    <CardContent sx={{ textAlign: "right" }}>
+                    <CardContent sx={{ textAlign: "right", height: "100%", display: "flex", flexDirection: "column" }}>
                         <Box
                             sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2, flexDirection: "row-reverse" }}
                         >
-                            <Warning color={lowStockItems.length > 0 ? "warning" : "disabled"} />
+                            <Inventory color="primary" />
                             <Typography
                                 variant="h6"
-                                color={lowStockItems.length > 0 ? "warning.main" : "text.secondary"}
+                                color="text.primary"
                             >
-                                מלאי נמוך ({lowStockItems.length})
+                                סטטוס מלאי מוצרים
                             </Typography>
                         </Box>
-                        {lowStockItems.length === 0 ? (
+                        
+                        {allItems.length === 0 ? (
                             <Typography variant="body2" color="text.secondary">
-                                כל המוצרים במלאי תקין ✓
+                                אין מוצרים להצגה
                             </Typography>
                         ) : (
                             <Box
                                 sx={{
                                     display: "flex",
                                     flexDirection: "column",
-                                    gap: 0.5,
-                                    maxHeight: 120,
+                                    gap: 1,
+                                    maxHeight: 140,
                                     overflowY: "auto",
+                                    pr: 1
                                 }}
                             >
-                                {lowStockItems.map((item) => (
-                                    <Box
-                                        key={item.id}
-                                        sx={{
-                                            display: "flex",
-                                            justifyContent: "space-between",
-                                            alignItems: "center",
-                                            flexDirection: "row-reverse",
-                                        }}
-                                    >
-                                        <Typography
-                                            variant="body2"
+                                {allItems.map((item) => {
+                                    const stockColor = item.stock < 10 ? "error.main" : item.stock < 20 ? "warning.main" : "success.main";
+                                    return (
+                                        <Box
+                                            key={item.id}
                                             sx={{
-                                                overflow: "hidden",
-                                                textOverflow: "ellipsis",
-                                                whiteSpace: "nowrap",
-                                                maxWidth: "70%",
+                                                display: "flex",
+                                                justifyContent: "space-between",
+                                                alignItems: "center",
+                                                flexDirection: "row-reverse",
+                                                p: 0.5,
+                                                borderRadius: 1,
+                                                "&:hover": { bgcolor: "rgba(0,0,0,0.02)" }
                                             }}
                                         >
-                                            {item.name}
-                                        </Typography>
-                                        <Typography variant="caption" color="warning.main" sx={{ fontWeight: "bold" }}>
-                                            {item.stock} נותרו
-                                        </Typography>
-                                    </Box>
-                                ))}
+                                            <Typography
+                                                variant="body2"
+                                                sx={{
+                                                    overflow: "hidden",
+                                                    textOverflow: "ellipsis",
+                                                    whiteSpace: "nowrap",
+                                                    maxWidth: "70%",
+                                                    fontWeight: 500
+                                                }}
+                                            >
+                                                {item.name}
+                                            </Typography>
+                                            <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                                                <Typography variant="caption" sx={{ color: "text.secondary" }}>
+                                                    כמות:
+                                                </Typography>
+                                                <Typography variant="body2" sx={{ color: stockColor, fontWeight: "bold" }}>
+                                                    {item.stock}
+                                                </Typography>
+                                            </Box>
+                                        </Box>
+                                    );
+                                })}
                             </Box>
                         )}
                     </CardContent>

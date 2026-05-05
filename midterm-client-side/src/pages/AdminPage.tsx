@@ -358,7 +358,7 @@ const AdminPage = () => {
             </Box>
 
             <TabPanel value={tabValue} index={0}>
-                <AnalyticsTab analytics={analytics} totalProductsCount={items.length} lowStockItems={lowStockItems} />
+                <AnalyticsTab analytics={analytics} totalProductsCount={items.length} lowStockItems={lowStockItems} allItems={items} />
             </TabPanel>
 
             <TabPanel value={tabValue} index={1}>

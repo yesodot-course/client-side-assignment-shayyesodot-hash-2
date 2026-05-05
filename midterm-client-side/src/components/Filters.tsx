@@ -66,20 +66,24 @@ export const Filters = ({
                 type="number"
                 size="small"
                 fullWidth
+                slotProps={{ htmlInput: { min: 0 } }}
                 value={maxPrice}
-                onChange={(event) =>
-                    onChange({ category, supplier, sortBy, minPrice, maxPrice: Number(event.target.value) })
-                }
+                onChange={(event) => {
+                    const value = Math.max(0, Number(event.target.value));
+                    onChange({ category, supplier, sortBy, minPrice, maxPrice: value });
+                }}
             />
             <TextField
                 label="מחיר מינימלי"
                 type="number"
                 size="small"
                 fullWidth
+                slotProps={{ htmlInput: { min: 0 } }}
                 value={minPrice}
-                onChange={(event) =>
-                    onChange({ category, supplier, sortBy, minPrice: Number(event.target.value), maxPrice })
-                }
+                onChange={(event) => {
+                    const value = Math.max(0, Number(event.target.value));
+                    onChange({ category, supplier, sortBy, minPrice: value, maxPrice });
+                }}
             />
         </Box>
 
